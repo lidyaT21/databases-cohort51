@@ -1,0 +1,26 @@
+What are the collections?
+ What information will you embed in a document and which will you store normalised?
+ ## Collections
+ 1.Recipes           Embedded Information: Steps, Ingredients
+ 2.Categories        Normalized(referenced to Recipes)
+ 
+ 
+ What made you decide when to embed information? What assumptions did you make?
+ 
+ Recipes Collection:
+ 
+ Embedded Steps: Steps are specific to each recipe and unlikely to be reused elsewhere, so embedding them makes retrieval easier and faster.
+ Embedded Ingredients: While ingredients themselves might be reusable, the specific quantity and unit per recipe make it more practical to embed them. This reduces the need for joins or separate queries to fetch ingredient details.
+ 
+ Categories Collection:
+ 
+ Categories are simple and often shared across multiple recipes. Keeping them as a separate collection ensures 
+ that changes to a category's name or properties are automatically reflected in all recipes that reference it.
+ 
+ 
+ If you were given MySQL and MongoDB as choices to build the recipe's database at the beginning, which one would you choose and why?
+ 
+ 
+ I think I would have choosen MongoDB,becasue the recipe data is  not a complex data and mongodb gives me flexiblity and easiness of building the database
+ specially for nested data and it's easy to read. Additionally I believe that MongoDB aggregation framework, can simplify querying for scenarios involving nested data structures.
+ 
